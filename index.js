@@ -148,21 +148,26 @@ speak(){
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor extends Lambdasian{
-  constructor(atrs,specialty, favLanguage, favSubjects){
+  constructor(atrs){
     super(atrs)
     this.specialty = atrs.specialty;
     this.favLanguage = atrs.favLanguage;
     this.catchPhrase = atrs.catchPhrase;
   }
-  demo(specialty){
+  demo(){
     return `Today we are learning about ${this.specialty}`
   }
   grade(){
     return `${student.name} receives a perfect score on ${this.specialty}`
   }
 }
-const teacher = new Instructor
-});
+
+const teacher = new Instructor({
+  specialty: 'redux',
+  favLanguage: 'JavaScript, Python, Elm etc.',
+  catchPhrase: 'Don\t forget the homies'
+})
+
 /*
   TASK 5
     - Write a Student class extending Lambdasian.
@@ -188,8 +193,7 @@ class Student extends Lambdasian {
    listSubjects(){
     return this.favSubjects + `HTML, CSS, JS`;
    }
-   PRAssignment(name){
-     if(this.name = 0)
+   PRAssignment(){
     return `${this.name} has submitted a PR for ${this.favSubjects}`;
    }
    sprintChallenge(){
@@ -210,10 +214,20 @@ class Student extends Lambdasian {
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-  constructor(main){
-    this.gradClassname = 'CS1'
-    this.favInstructor = 'Sean'
+class ProjectManager extends Instructor {
+  constructor(atrs){
+    super(atrs)
+    this.gradClassName = atrs.gradClassName;
+    this.favInstructor = atrs.favInstructor;
+  }
+  standUp(){
+    return `${this.name} announces to ${this.channel}, @channel standy times!`
+  }
+  debugsCode(){
+    return `${this.name} debugs ${student.name}'s code on ${this.subject}`
+  }
+  demo(){
+
   }
 }
 
