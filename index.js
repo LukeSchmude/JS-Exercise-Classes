@@ -148,34 +148,21 @@ speak(){
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor extends Lambdasian{
-  constructor(atrs){
+  constructor(atrs,specialty, favLanguage, favSubjects){
     super(atrs)
     this.specialty = atrs.specialty;
     this.favLanguage = atrs.favLanguage;
     this.catchPhrase = atrs.catchPhrase;
   }
-  demo(){
-    return `Today we are learning about ${this.subject}`
+  demo(specialty){
+    return `Today we are learning about ${this.specialty}`
   }
-  grade(score){
-    if(score <= 100){
-    }else if(score >= 90)
-    return `You got an A`
-    if(score <= 89){
-    }else if(score >= 80)
-    return `You got a B`
-    if(score <= 79){
-    }else if(score >=70)
-    return `You got a C`
-    if(score <= 69){
-    }else if(score >=60)
-    return `You got a D`
-    if(score >= 59){
-    }else if(score <=1)
-    return `You will have to try again`
-
+  grade(){
+    return `${student.name} receives a perfect score on ${this.specialty}`
   }
 }
+const teacher = new Instructor
+});
 /*
   TASK 5
     - Write a Student class extending Lambdasian.
@@ -224,8 +211,12 @@ class Student extends Lambdasian {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager {
-   
+  constructor(main){
+    this.gradClassname = 'CS1'
+    this.favInstructor = 'Sean'
+  }
 }
+
 /*
   STRETCH PROBLEM (no tests!)
     - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
