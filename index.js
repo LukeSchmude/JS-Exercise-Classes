@@ -155,10 +155,10 @@ class Instructor extends Lambdasian{
     this.catchPhrase = atrs.catchPhrase;
   }
   demo(subject){
-    return `Today we are learning about ${subject}`
+    return `Today we are learning about ${subject}`;
   }
   grade(student, subject){
-    return `${student.name} receives a perfect score on ${subject}`
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 }
 
@@ -196,8 +196,8 @@ class Student extends Lambdasian {
    PRAssignment(subject){
     return `${this.name} has submitted a PR for ${subject}`;
    }
-   sprintChallenge(student, subject){
-    return `${student.name} has begun sprint challenge on ${subject}`
+   sprintChallenge(subject){
+    return `${this.name} has begun sprint challenge on ${subject}`;
    }
 }
 
@@ -224,7 +224,7 @@ class ProjectManager extends Instructor {
     return `${this.name} announces to ${subject}, @channel standy times!`
   }
   debugsCode(student, subject){
-    return `${this.name} debugs ${student.name}'s code on ${subject}`
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
 }
 
